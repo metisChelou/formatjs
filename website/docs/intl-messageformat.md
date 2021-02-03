@@ -261,8 +261,8 @@ new IntlMessageFormat('hello').format() // prints out hello
 // is equivalent to
 
 import IntlMessageFormat from 'intl-messageformat'
-import parser from 'intl-messageformat-parser'
-new IntlMessageFormat(parser.parse('hello')).format() // prints out hello
+import { parse } from 'intl-messageformat-parser'
+new IntlMessageFormat(parse('hello')).format() // prints out hello
 ```
 
 This helps performance for cases like SSR or preload/precompilation-supported platforms since `AST` can be cached.
